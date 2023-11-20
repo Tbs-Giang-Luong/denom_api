@@ -68,7 +68,7 @@ app.get("/v1/:keyword", (req, resp) => {
   }
 });
 
-app.get("/v1", (req, resp) => {
+app.get("", (req, resp) => {
   const limit = Number(req.query.limit);
 
   const thumbnails = [];
@@ -82,7 +82,7 @@ app.get("/v1", (req, resp) => {
         const image = $(this).find("a > img").attr("src");
         thumbnails.push({
           name: name,
-          url: "http://localhost:8000/v1" + url.split("wiki")[1],
+          url: "https://denom-api.onrender.com" + url.split("wiki")[1],
           image: image
         });
       });
