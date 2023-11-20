@@ -21,7 +21,7 @@ app.get("/v1/:keyword", (req, resp) => {
   const galleries = [];
   const figure = figureApi + req.params.keyword;
   try {
-    axios(figure).then(res => {
+    axios.get(figure).then(res => {
       const result = res.data;
       const $ = cheerio.load(result);
       //getGallery
