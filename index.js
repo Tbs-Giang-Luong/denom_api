@@ -13,7 +13,7 @@ const port = 3000;
 const urlApi = "https://kimetsu-no-yaiba.fandom.com/wiki/Kimetsu_no_Yaiba_Wiki";
 const figureApi = "https://kimetsu-no-yaiba.fandom.com/wiki/";
 
-app.get("/v1/:keyword", (req, resp) => {
+app.get("/:keyword", (req, resp) => {
   const titles = [];
   const valueTitles = [];
   const characterObject = {};
